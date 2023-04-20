@@ -43,6 +43,16 @@ namespace ProyectoLibreria
                 x => x.UseSqlServer(cad_conexion)
 
                 );
+            /*agregando CORS*/
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +64,9 @@ namespace ProyectoLibreria
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProyectoLibreria v1"));
             }
+
+            /*usando CORS*/
+            app.UseCors();
 
             app.UseHttpsRedirection();
 

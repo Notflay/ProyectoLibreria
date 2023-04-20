@@ -39,6 +39,14 @@ namespace ProyectoLibreria.DataAccess
         public DbSet<sp_estadoIdioma> sp_estadoIdioma { get; set; }
         public virtual DbSet<LISTAR_CLIENTES> LISTAR_CLIENTES { get; set; }
         public virtual DbSet<LISTAR_PAISES> LISTAR_PAISES { get; set; }
+        public DbSet<sp_buscar_clientes_por_nombre> sp_buscar_clientes_por_nombre { get; set; }
+        public DbSet<sp_obtener_registros> sp_obtener_registros { get; set; }
+        public DbSet<sp_filtrar_por_inicial> sp_filtrar_por_inicial { get; set; }
+        public DbSet<usp_consultareditorial_porpais> usp_consultareditorial_porpais { get; set; }
+        public DbSet<filtrar_nacionalidad> filtrar_nacionalidad { get; set; }
+        public DbSet<filtrar_publicacion> filtrar_publicacion { get; set; }
+        public DbSet<Listar_autores> Listar_autores { get; set; }
+        public DbSet<Listar_libros> Listar_libros { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
