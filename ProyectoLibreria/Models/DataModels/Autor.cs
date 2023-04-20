@@ -13,6 +13,5 @@ namespace ProyectoLibreria.Models.DataModels
         public DateTime Fech_naciminto { get; set; }
         public DateTime Fech_defuncion { get; set; }
         // LIBROS
-        public virtual ICollection<Libro> Libros { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ProyectoLibreria.Models.DataModels
         public int IdCategoria { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public ICollection<Libro> Libros { get; set; } = new List<Libro>();
+
 
     }
 }

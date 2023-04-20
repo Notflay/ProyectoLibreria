@@ -11,6 +11,7 @@ namespace ProyectoLibreria.DataAccess
     {
         public LibreriaDBContext()
         {
+
         }
         public LibreriaDBContext(DbContextOptions<LibreriaDBContext> options)
             : base(options)

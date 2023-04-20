@@ -11,10 +11,7 @@ namespace ProyectoLibreria.Models.DataModels
         public string Comentario { get; set; }
         public string Calificación { get; set; }
         public string FechaOpi { get; set; }
-        public virtual Cliente Cliente { get; set; }
-        // id de la tabla Inventario al que pertenece este Producto
-        [ForeignKey("Cliente")]
-        public int IdCliente { get; set; }
+
         public string Producto { get; set; }
     }
 }

@@ -11,6 +11,5 @@ namespace ProyectoLibreria.Models.DataModels
         public string Tematicas { get; set; }
         public string Continente { get; set; }
         public string Catalogo { get; set; }
-        public ICollection<Libro> Libros { get; set; } = new List<Libro>();
     }
 }

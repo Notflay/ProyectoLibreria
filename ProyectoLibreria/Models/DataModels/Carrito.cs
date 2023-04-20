@@ -9,6 +9,6 @@ namespace ProyectoLibreria.Models.DataModels
         public int IdCarrito { get; set; }
         public string Cantidad { get; set; }
         public string PrecioTotal { get; set; }
-        public ICollection<Libro> Libros { get; set; } = new List<Libro>();
+
     }
 }
