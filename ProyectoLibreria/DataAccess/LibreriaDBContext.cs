@@ -47,6 +47,7 @@ namespace ProyectoLibreria.DataAccess
         public DbSet<filtrar_publicacion> filtrar_publicacion { get; set; }
         public DbSet<Listar_autores> Listar_autores { get; set; }
         public DbSet<Listar_libros> Listar_libros { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
