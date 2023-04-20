@@ -1,4 +1,5 @@
 ﻿using System;
+using LibreriaAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using ProyectoLibreria.Models.DataModels;
@@ -36,6 +37,8 @@ namespace ProyectoLibreria.DataAccess
         public DbSet<sp_tipoOpi> sp_tipoOpi { get; set; }
         public DbSet<sp_nivelFlui> sp_nivelFlui { get; set; }
         public DbSet<sp_estadoIdioma> sp_estadoIdioma { get; set; }
+        public virtual DbSet<LISTAR_CLIENTES> LISTAR_CLIENTES { get; set; }
+        public virtual DbSet<LISTAR_PAISES> LISTAR_PAISES { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
