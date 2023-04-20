@@ -19,6 +19,13 @@ namespace ProyectoLibreria.Controllers
             _context = context;
         }
 
+        [HttpGet("listaOpiniones")]
+        public ActionResult<List<Opinion>> getOpiniones()
+        {
+            var opiniones = _context.Opiniones.ToList();
+            return Ok(opiniones);
+        }
+
         [HttpGet("tipoopi")]
         public async Task<ActionResult<IEnumerable<sp_tipoOpi>>> sp_tipoOpi(string tipoopi)
         {

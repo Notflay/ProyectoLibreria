@@ -18,6 +18,12 @@ namespace ProyectoLibreria.Controllers
         {
             _context = context;
         }
+        [HttpGet("listaLenguajes")]
+        public ActionResult<List<Categoria>> GetClientes()
+        {
+            var lenguajes = _context.Lenguajes.ToList();
+            return Ok(lenguajes);
+        }
 
         [HttpGet("nivel")]
         public async Task<ActionResult<IEnumerable<sp_nivelFlui>>> sp_nivelFlui(string nivel)

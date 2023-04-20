@@ -21,6 +21,13 @@ namespace ProyectoLibreria.Controllers
             _context = context;
         }
 
+        [HttpGet("listarCarrito")]
+        public ActionResult<List<Carrito>> GetCarrito()
+        {
+            var carritos = _context.Carritos.ToList();
+            return Ok(carritos);
+        }
+
         // GET: api/Carritoes
         [HttpGet("TopUp")]
         public async Task<ActionResult<IEnumerable<sp_mayoresTop>>> getTopUp()

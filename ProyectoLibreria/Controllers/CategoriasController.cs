@@ -20,7 +20,13 @@ namespace ProyectoLibreria.Controllers
         {
             _context = context;
         }
-
+        // GET: api/Categorias
+        [HttpGet("listaCategorias")]
+        public ActionResult<List<Categoria>> GetClientes()
+        {
+            var categorias = _context.Categorias.ToList();
+            return Ok(categorias);
+        }
         // GET: api/Categorias
         [HttpGet("letra")]
         public async Task<ActionResult<IEnumerable<sp_letraCategoria>>> getLetraCategoria(string letra)
