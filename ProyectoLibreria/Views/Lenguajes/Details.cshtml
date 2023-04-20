@@ -1,0 +1,48 @@
+﻿@model ProyectoLibreria.Models.DataModels.Lenguaje
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lenguaje</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipLeng)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipLeng)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FamLeng)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FamLeng)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RegIdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RegIdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NivFluIdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NivFluIdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstadIdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadIdi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdLenguaje">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

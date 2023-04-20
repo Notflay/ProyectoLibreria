@@ -27,7 +27,15 @@ namespace ProyectoLibreria.DataAccess
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Opinion> Opiniones { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-
+        public DbSet<sp_menoresTop> sp_menoresTop { get; set; }
+        public DbSet<sp_mayoresTop> sp_mayoresTop { get; set; }
+        public DbSet<sp_letraCategoria> sp_letraCategoria { get; set; }
+        public DbSet<sp_searchEdad> sp_searchEdad { get; set; }
+        public DbSet<sp_searchNotEdad> sp_searchNotEdad { get; set; }
+        public DbSet<sp_FechaOpi> sp_FechaOpi { get; set; }
+        public DbSet<sp_tipoOpi> sp_tipoOpi { get; set; }
+        public DbSet<sp_nivelFlui> sp_nivelFlui { get; set; }
+        public DbSet<sp_estadoIdioma> sp_estadoIdioma { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

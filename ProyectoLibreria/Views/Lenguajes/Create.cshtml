@@ -1,0 +1,53 @@
+﻿@model ProyectoLibreria.Models.DataModels.Lenguaje
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Lenguaje</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TipLeng" class="control-label"></label>
+                <input asp-for="TipLeng" class="form-control" />
+                <span asp-validation-for="TipLeng" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamLeng" class="control-label"></label>
+                <input asp-for="FamLeng" class="form-control" />
+                <span asp-validation-for="FamLeng" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegIdi" class="control-label"></label>
+                <input asp-for="RegIdi" class="form-control" />
+                <span asp-validation-for="RegIdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NivFluIdi" class="control-label"></label>
+                <input asp-for="NivFluIdi" class="form-control" />
+                <span asp-validation-for="NivFluIdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadIdi" class="control-label"></label>
+                <input asp-for="EstadIdi" class="form-control" />
+                <span asp-validation-for="EstadIdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

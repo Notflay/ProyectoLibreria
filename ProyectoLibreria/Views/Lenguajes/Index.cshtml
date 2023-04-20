@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProyectoLibreria.Models.DataModels.Lenguaje>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipLeng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamLeng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegIdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NivFluIdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadIdi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipLeng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamLeng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegIdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NivFluIdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadIdi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdLenguaje">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdLenguaje">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdLenguaje">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
